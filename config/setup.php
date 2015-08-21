@@ -57,8 +57,9 @@ foreach ( $dirs as $dir ) {
   foreach ( $db_names as $db_name ) {
     `mysql -u root -e "CREATE DATABASE IF NOT EXISTS $db_name"`;
     if ( file_exists( "database/$db_name.sql" ) ) {
+      echo "Importing $db_name.sql to database '$db_name'.....";
       `mysql -u root $db_name < "database/$db_name.sql"`;
-      echo "Import to: '$db_name'";
+      echo "Import to: '$db_name' finnished.";
     }
     echo "Set up database: '$db_name'";
   }
