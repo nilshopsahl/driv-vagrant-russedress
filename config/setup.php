@@ -52,7 +52,7 @@ foreach ( $dirs as $dir ) {
    */
 
   //$db_name = preg_replace( '/\W/', '_', $site );
-  $db_names = array("russ","russ_ejabbered","russ_v5");
+  $db_names = array("russ","russ_v5");
   
   foreach ( $db_names as $db_name ) {
     `mysql -u root -e "CREATE DATABASE IF NOT EXISTS $db_name"`;
